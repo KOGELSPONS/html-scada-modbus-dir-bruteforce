@@ -3,11 +3,6 @@ This Python script is designed to brute-force directories and files for CTF chal
 
 ## Installation
 
-### Install dependencies
-```bash
-sudo apt install python3-requests
-```
-
 ### Clone the repository:
 ```bash
 git clone https://github.com/KOGELSPONS/html-scada-modbus-dir-bruteforce
@@ -16,6 +11,11 @@ git clone https://github.com/KOGELSPONS/html-scada-modbus-dir-bruteforce
 ### Navigate into the project folder:
 ```bash
 cd html-scada-modbus-dir-bruteforce
+```
+
+### Install dependencies
+```bash
+sudo apt install python3-requests
 ```
 
 ## Configuration
