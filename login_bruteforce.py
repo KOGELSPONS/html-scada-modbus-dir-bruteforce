@@ -1,4 +1,4 @@
-# Created with ChatGPT for a CTF challenge
+# Created with the help of ChatGPT for a CTF challenge
 # Purpose: Brute-force directory paths on hidden log pages
 # Use only in Capture The Flag (CTF) scenarios
 # Unauthorized use may violate terms of service
@@ -11,11 +11,11 @@ with open('config.json', 'r') as config_file:
     config = json.load(config_file)
 
 # Configuration
-ip = config.get("ip", "192.168.56.108")  # Default to this IP if not specified
-port = config.get("port", 5900)  # Default to this port if not specified
-username = config.get("username", "MyTurbine")
-password = config.get("password", "m442+SRt")
-readability = config.get("readability", True)
+ip = config.get("ip")
+port = config.get("port")
+username = config.get("username")
+password = config.get("password")
+readability = config.get("readability")
 
 # Construct the base URL
 base_url = f"http://{ip}:{port}"
@@ -51,8 +51,9 @@ def login():
 def pretty_print_response(response_text):
     """Print the full HTML response, no truncation."""
     if readability:
-        return response_text  # Print the full HTML if readability is enabled
-    return response_text[:500]  # Truncate if readability is off (optional)
+        return response_text[:500]  # Truncate if readability is on
+    else:
+        return response_text # Print the full HTML if readability is off
 
 def brute_force_files(session, logs_url, directories, filenames, log_file="failed_discoveries.log"):
     failed_count = 0
@@ -88,7 +89,7 @@ def brute_force_files(session, logs_url, directories, filenames, log_file="faile
                     print(f"{'='*50}")
                     print("\nFull HTML Response:\n")
                     print(pretty_print_response(response.text))  # Print the full HTML
-                    print(f"{'='*50}")
+                    # print(f"{'='*50}") # is double
                     return full_path  # Exit on first successful file discovery
                 elif response.status_code != 200:
                     failed_count += 1
