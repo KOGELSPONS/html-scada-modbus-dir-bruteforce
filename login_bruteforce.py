@@ -51,9 +51,9 @@ def login():
 def pretty_print_response(response_text):
     """Print the full HTML response, no truncation."""
     if readability:
-        return response_text[:500]  # Truncate if readability is on
+        return response_text[:500]  # Truncate if readability is on (optional)
     else:
-        return response_text # Print the full HTML if readability is off
+        return response_text # Print the full HTML if readability is disabled
 
 def brute_force_files(session, logs_url, directories, filenames, log_file="failed_discoveries.log"):
     failed_count = 0
@@ -89,7 +89,7 @@ def brute_force_files(session, logs_url, directories, filenames, log_file="faile
                     print(f"{'='*50}")
                     print("\nFull HTML Response:\n")
                     print(pretty_print_response(response.text))  # Print the full HTML
-                    # print(f"{'='*50}") # is double
+                    print(f"{'='*50}")
                     return full_path  # Exit on first successful file discovery
                 elif response.status_code != 200:
                     failed_count += 1
@@ -98,8 +98,8 @@ def brute_force_files(session, logs_url, directories, filenames, log_file="faile
                     failed_count += 1
                     failed_paths.append(full_path)
 
-                # Add a small delay between each attempt (e.g., 0.05 seconds)
-                time.sleep(0.05)
+                # Add a small delay between each attempt (e.g., 0.025 seconds)
+                time.sleep(0.025)
 
         # Log all failed attempts to the log file
         if failed_paths:
@@ -119,7 +119,6 @@ if __name__ == "__main__":
         # Step 2: Perform file bruteforce after login
         found_file = brute_force_files(session, logs_url, directories, filenames)
         if found_file:
-            print(f"\n{'='*50}")
             print(f"File discovered: {found_file}")
             print(f"{'='*50}")
         else:
