@@ -13,18 +13,13 @@ git clone https://github.com/KOGELSPONS/html-scada-modbus-dir-bruteforce
 cd html-scada-modbus-dir-bruteforce
 ```
 
-### Install dependencies
-```bash
-sudo apt install python3-requests
-```
-
-## Configuration
-
 ### Installing the dependencies
 Instead of installing dependencies manually, you can install all required dependencies from the `requirements.txt` file:
 ```bash
 pip3 install -r requirements.txt
 ```
+
+## Configuration
 
 ### Edit the config
 ```bash
