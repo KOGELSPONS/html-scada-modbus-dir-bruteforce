@@ -1,0 +1,26 @@
+{
+  "directories": [
+    "/", "/etc/", "/var/", "/home/", "/usr/", "/tmp/", "/root/", "/var/log/",
+    "/bin/", "/sbin/", "/lib/", "/lib64/", "/opt/", "/mnt/", "/media/", "/srv/",
+    "/sys/", "/dev/", "/proc/", "/boot/", "/run/", "/usr/local/", "/usr/share/",
+    "/etc/modbus/", "/etc/scada/", "/var/scada/", "/var/log/modbus/", "/var/log/scada/",
+    "/opt/scada/", "/opt/modbus/", "/home/scada/", "/home/modbus/", "/etc/modbus.d/",
+    "/var/lib/scada/", "/usr/local/scada/"
+  ],
+  "filenames": [
+    "passwd", "shadow", "group", "hostname", "network/interfaces", "hosts", "resolv.conf",
+    ".bash_history", ".bashrc", ".profile", "authorized_keys", "crontab", "dmesg",
+    "ssh/sshd_config", "crontab", "sysctl.conf", "inputrc", "sudoers", ".bash_logout",
+    "fstab", "rc.local", "motd", "issue", "apache2.conf", "nginx.conf", "httpd.conf",
+    "my.cnf", "php.ini", "mysql_config", "nginx.conf", "iptables", "logrotate.conf",
+    "rsyslog.conf", "cron.d", "cron.daily", "cron.hourly", "cron.monthly", "cron.weekly",
+    "dbus.conf", "syslog.conf", ".bash_profile", ".zshrc", "ssh_config", ".profile", ".gitconfig",
+    "auth.log", "syslog", "kern.log", "messages", "dmesg", "debug", "lastlog", "wtmp", "btmp",
+    "modbus.cfg", "scada.cfg", "modbus-config.txt", "scada-config.txt", "modbus_log.txt", 
+    "scada_log.txt", "modbus_connection.log", "scada_events.log", "modbus_error.log", 
+    "scada_database.db", "modbus_communications.db", "modbus_params.ini", "scada_params.ini",
+    "modbus_config.json", "scada_config.json", "modbus_settings.conf", "scada_settings.conf",
+    "modbus_history.log", "scada_history.log", "modbus_status.log", "scada_status.log",
+    "modbus_user_config.ini", "scada_user_config.ini", "scada_config.xml", "modbus_config.xml"
+  ]
+}
